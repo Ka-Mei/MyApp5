@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52009B40246ED4C40010425C /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52009B3F246ED4C40010425C /* DetailController.swift */; };
+		52009B42246ED5400010425C /* WriteLookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52009B41246ED5400010425C /* WriteLookingController.swift */; };
 		52276A97246ECF1A001CF3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276A96246ECF1A001CF3F8 /* AppDelegate.swift */; };
 		52276A99246ECF1A001CF3F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */; };
 		52276A9B246ECF1A001CF3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276A9A246ECF1A001CF3F8 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52009B3F246ED4C40010425C /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		52009B41246ED5400010425C /* WriteLookingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLookingController.swift; sourceTree = "<group>"; };
 		52276A93246ECF1A001CF3F8 /* MyLoseApp5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLoseApp5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52276A96246ECF1A001CF3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */,
 				52276A9A246ECF1A001CF3F8 /* ViewController.swift */,
 				52276A9C246ECF1A001CF3F8 /* Main.storyboard */,
+				52009B41246ED5400010425C /* WriteLookingController.swift */,
+				52009B3F246ED4C40010425C /* DetailController.swift */,
 				52276AAD246ECF69001CF3F8 /* SearchListController.swift */,
 				52276AA2246ECF1C001CF3F8 /* Assets.xcassets */,
 				52276AA4246ECF1C001CF3F8 /* LaunchScreen.storyboard */,
@@ -146,8 +152,10 @@
 			files = (
 				52276A9B246ECF1A001CF3F8 /* ViewController.swift in Sources */,
 				52276A97246ECF1A001CF3F8 /* AppDelegate.swift in Sources */,
+				52009B42246ED5400010425C /* WriteLookingController.swift in Sources */,
 				52276AAE246ECF69001CF3F8 /* SearchListController.swift in Sources */,
 				52276AA1246ECF1A001CF3F8 /* MyLoseApp5.xcdatamodeld in Sources */,
+				52009B40246ED4C40010425C /* DetailController.swift in Sources */,
 				52276A99246ECF1A001CF3F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,6 +28,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="plus" catalog="system"/>
                                             </button>
+                                            <connections>
+                                                <segue destination="KUR-6a-VG0" kind="show" id="kTB-jm-dPE"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -38,7 +41,11 @@
                                     <constraint firstAttribute="height" constant="50" id="3Ga-h2-flP"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="T81-Be-Jf4"/>
+                                    <barButtonItem title="ホーム" id="T81-Be-Jf4"/>
+                                    <barButtonItem title="迷子" id="anY-IU-32t"/>
+                                    <barButtonItem title="保護" id="rtc-FC-YhN"/>
+                                    <barButtonItem title="アルバム" id="sJe-tT-Cje"/>
+                                    <barButtonItem title="その他" id="p8h-2U-Lyg"/>
                                 </items>
                             </toolbar>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OnT-qB-y6h">
@@ -192,8 +199,212 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
+        <!--Write Looking Controller-->
+        <scene sceneID="Lq6-hV-Tv7">
+            <objects>
+                <viewController id="KUR-6a-VG0" customClass="WriteLookingController" customModule="MyLoseApp5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iqj-gu-vx7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V55-3W-YJf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HRZ-jr-acu"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="迷子情報入力" id="40D-Kp-XG4"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPe-eP-8Jt">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KwR-K6-pcG"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="ioo-bn-uma"/>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-hd-EvD">
+                                <rect key="frame" x="0.0" y="94" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="2xU-zO-CnP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT1-qr-CFv">
+                                <rect key="frame" x="177" y="199" width="60" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plus.rectangle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7r-OG-p1t">
+                                <rect key="frame" x="30" y="449" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.95294117649999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8Sx-rY-AhV"/>
+                                    <constraint firstAttribute="width" constant="350" id="Nrb-M2-rq4"/>
+                                </constraints>
+                                <state key="normal" title="いなくなった日付選択"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eF-ZQ-qlK">
+                                <rect key="frame" x="30" y="364" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OHC-Nh-i3f"/>
+                                    <constraint firstAttribute="width" constant="130" id="bY4-0d-p6s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-k4-wzY">
+                                <rect key="frame" x="30" y="514" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.95294117649999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="2DC-cv-I69"/>
+                                    <constraint firstAttribute="height" constant="50" id="g1b-Cu-dvq"/>
+                                </constraints>
+                                <state key="normal" title="位置情報を入力する"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nx-D4-kFh">
+                                <rect key="frame" x="70" y="574" width="120" height="50"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.95294117649999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WqG-8d-D2P"/>
+                                    <constraint firstAttribute="width" constant="120" id="d3r-dN-Ht4"/>
+                                </constraints>
+                                <state key="normal" title="メス"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-Pc-1Bv">
+                                <rect key="frame" x="225" y="574" width="120" height="50"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.95294117649999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mjf-vu-OTG"/>
+                                    <constraint firstAttribute="width" constant="120" id="Nx2-v9-EIB"/>
+                                </constraints>
+                                <state key="normal" title="オス"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOv-jW-sfI">
+                                <rect key="frame" x="35" y="399" width="350" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="GRU-9b-KQV"/>
+                                    <constraint firstAttribute="width" constant="350" id="S4f-jf-gGA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-ox-Xc4">
+                                <rect key="frame" x="30" y="729" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0F0-cp-dHh"/>
+                                    <constraint firstAttribute="width" constant="350" id="joJ-4Q-xEi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他の情報を入力する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaP-n2-yzZ">
+                                <rect key="frame" x="30" y="694" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1KF-Ig-D9f"/>
+                                    <constraint firstAttribute="height" constant="30" id="LNz-4M-KnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2s-Fa-fBH">
+                                <rect key="frame" x="30" y="634" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.95294117649999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DyZ-Eh-EJS"/>
+                                    <constraint firstAttribute="width" constant="350" id="kJH-iu-R9I"/>
+                                </constraints>
+                                <state key="normal" title="種類を入力する"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4gI-k4-wzY" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="30" id="0rC-sN-vBt"/>
+                            <constraint firstItem="JaP-n2-yzZ" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="30" id="131-pK-eCq"/>
+                            <constraint firstItem="R7r-OG-p1t" firstAttribute="top" secondItem="FOv-jW-sfI" secondAttribute="bottom" constant="15" id="46o-SV-KY9"/>
+                            <constraint firstItem="R7r-OG-p1t" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="30" id="9hL-r9-Q7B"/>
+                            <constraint firstItem="V55-3W-YJf" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" id="AG8-AI-kT0"/>
+                            <constraint firstItem="FOv-jW-sfI" firstAttribute="top" secondItem="8eF-ZQ-qlK" secondAttribute="bottom" constant="5" id="CQP-FJ-0Ge"/>
+                            <constraint firstItem="5nx-D4-kFh" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="70" id="EdC-oO-KC3"/>
+                            <constraint firstItem="FOv-jW-sfI" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="35" id="GHB-8i-a2k"/>
+                            <constraint firstItem="qPe-eP-8Jt" firstAttribute="leading" secondItem="Iqj-gu-vx7" secondAttribute="leading" id="Iec-iu-kk4"/>
+                            <constraint firstItem="aO5-hd-EvD" firstAttribute="trailing" secondItem="hTf-Cl-6yj" secondAttribute="trailing" id="JhH-Zh-Wab"/>
+                            <constraint firstItem="V55-3W-YJf" firstAttribute="top" secondItem="hTf-Cl-6yj" secondAttribute="top" id="MtZ-4J-Euo"/>
+                            <constraint firstItem="g2s-Fa-fBH" firstAttribute="top" secondItem="5nx-D4-kFh" secondAttribute="bottom" constant="10" id="Nfa-xd-1Ik"/>
+                            <constraint firstItem="aO5-hd-EvD" firstAttribute="top" secondItem="V55-3W-YJf" secondAttribute="bottom" id="QAz-IQ-seO"/>
+                            <constraint firstItem="Vx3-ox-Xc4" firstAttribute="top" secondItem="JaP-n2-yzZ" secondAttribute="bottom" constant="5" id="Ros-Bo-trb"/>
+                            <constraint firstItem="8eF-ZQ-qlK" firstAttribute="top" secondItem="aO5-hd-EvD" secondAttribute="bottom" constant="20" id="Waq-WQ-GdE"/>
+                            <constraint firstItem="JaP-n2-yzZ" firstAttribute="top" secondItem="g2s-Fa-fBH" secondAttribute="bottom" constant="10" id="XM3-Mv-Tbg"/>
+                            <constraint firstItem="g2s-Fa-fBH" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="30" id="ZyS-Fc-oZd"/>
+                            <constraint firstItem="hTf-Cl-6yj" firstAttribute="trailing" secondItem="qPe-eP-8Jt" secondAttribute="trailing" id="a2v-Rj-HEA"/>
+                            <constraint firstItem="Vx3-ox-Xc4" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="30" id="aHg-U9-MmY"/>
+                            <constraint firstItem="5nx-D4-kFh" firstAttribute="top" secondItem="4gI-k4-wzY" secondAttribute="bottom" constant="10" id="fhS-JG-fZw"/>
+                            <constraint firstItem="MUh-Pc-1Bv" firstAttribute="top" secondItem="4gI-k4-wzY" secondAttribute="bottom" constant="10" id="gea-eE-gdp"/>
+                            <constraint firstItem="MUh-Pc-1Bv" firstAttribute="leading" secondItem="5nx-D4-kFh" secondAttribute="trailing" constant="35" id="moJ-aQ-6Jz"/>
+                            <constraint firstItem="hTf-Cl-6yj" firstAttribute="bottom" secondItem="qPe-eP-8Jt" secondAttribute="bottom" id="o5u-ob-czH"/>
+                            <constraint firstItem="V55-3W-YJf" firstAttribute="trailing" secondItem="hTf-Cl-6yj" secondAttribute="trailing" id="qvb-d7-inj"/>
+                            <constraint firstItem="8eF-ZQ-qlK" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" constant="30" id="vls-1N-EM5"/>
+                            <constraint firstItem="aO5-hd-EvD" firstAttribute="leading" secondItem="hTf-Cl-6yj" secondAttribute="leading" id="wBV-v5-qkn"/>
+                            <constraint firstItem="4gI-k4-wzY" firstAttribute="top" secondItem="R7r-OG-p1t" secondAttribute="bottom" constant="15" id="y4O-qX-4xV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hTf-Cl-6yj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xeT-tg-P3d"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUT-oS-Jzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="117.85714285714285"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="XI0-ee-V7d">
+            <objects>
+                <viewController id="o4R-pm-KSi" customClass="DetailController" customModule="MyLoseApp5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cPH-nw-nJO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noX-ZS-UCN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xof-7h-Jua"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="詳細画面" id="YbM-5C-y5e"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9x-FC-7zb">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Aaf-6S-qBu"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="oVa-Wa-q35"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="noX-ZS-UCN" firstAttribute="top" secondItem="mJF-bf-1s7" secondAttribute="top" id="0tI-zi-gnA"/>
+                            <constraint firstItem="noX-ZS-UCN" firstAttribute="leading" secondItem="mJF-bf-1s7" secondAttribute="leading" id="1gb-sL-1A7"/>
+                            <constraint firstItem="mJF-bf-1s7" firstAttribute="bottom" secondItem="u9x-FC-7zb" secondAttribute="bottom" id="4hB-Oe-3io"/>
+                            <constraint firstItem="u9x-FC-7zb" firstAttribute="leading" secondItem="mJF-bf-1s7" secondAttribute="leading" id="8v1-a8-96P"/>
+                            <constraint firstItem="noX-ZS-UCN" firstAttribute="trailing" secondItem="mJF-bf-1s7" secondAttribute="trailing" id="uqm-YL-KoW"/>
+                            <constraint firstItem="u9x-FC-7zb" firstAttribute="trailing" secondItem="mJF-bf-1s7" secondAttribute="trailing" id="vrX-MN-h6A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mJF-bf-1s7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SmM-ME-6nh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="118"/>
+        </scene>
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus.rectangle" catalog="system" width="128" height="93"/>
     </resources>
 </document>
