@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>257391247370-v6rn3m5ub00d9tvceqsclmr6osd4bosi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.257391247370-v6rn3m5ub00d9tvceqsclmr6osd4bosi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBSuD1f1sTF8wJp5uT-mjyqYJB0dBkZ9VI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>257391247370</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gmail.0801momiji.MyLoseApp5</string>
+	<key>PROJECT_ID</key>
+	<string>losepet171171-0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>losepet171171-0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:257391247370:ios:682edc93b7758dcc481ff3</string>
+	<key>DATABASE_URL</key>
+	<string>https://losepet171171-0.firebaseio.com</string>
+</dict>
+</plist>

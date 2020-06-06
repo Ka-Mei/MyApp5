@@ -8,7 +8,8 @@
 
 import UIKit
 
-class WriteLookingController: UITableViewController {
+class WriteLookingController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +22,18 @@ class WriteLookingController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }

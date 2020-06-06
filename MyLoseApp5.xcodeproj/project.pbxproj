@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		52009B40246ED4C40010425C /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52009B3F246ED4C40010425C /* DetailController.swift */; };
 		52009B42246ED5400010425C /* WriteLookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52009B41246ED5400010425C /* WriteLookingController.swift */; };
+		5204F5C5248C53A1002FCB45 /* MapWriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F5C4248C53A1002FCB45 /* MapWriteController.swift */; };
 		52276A97246ECF1A001CF3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276A96246ECF1A001CF3F8 /* AppDelegate.swift */; };
 		52276A99246ECF1A001CF3F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */; };
 		52276A9B246ECF1A001CF3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276A9A246ECF1A001CF3F8 /* ViewController.swift */; };
@@ -17,11 +18,14 @@
 		52276AA3246ECF1C001CF3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52276AA2246ECF1C001CF3F8 /* Assets.xcassets */; };
 		52276AA6246ECF1C001CF3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52276AA4246ECF1C001CF3F8 /* LaunchScreen.storyboard */; };
 		52276AAE246ECF69001CF3F8 /* SearchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276AAD246ECF69001CF3F8 /* SearchListController.swift */; };
+		5263F9AB2481F84E00CE0E1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */; };
+		5263F9AD2482007200CE0E1F /* FindWriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263F9AC2482007200CE0E1F /* FindWriteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52009B3F246ED4C40010425C /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		52009B41246ED5400010425C /* WriteLookingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLookingController.swift; sourceTree = "<group>"; };
+		5204F5C4248C53A1002FCB45 /* MapWriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWriteController.swift; sourceTree = "<group>"; };
 		52276A93246ECF1A001CF3F8 /* MyLoseApp5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLoseApp5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52276A96246ECF1A001CF3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		52276AA5246ECF1C001CF3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52276AA7246ECF1C001CF3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52276AAD246ECF69001CF3F8 /* SearchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListController.swift; sourceTree = "<group>"; };
+		5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5263F9AC2482007200CE0E1F /* FindWriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindWriteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +70,13 @@
 		52276A95246ECF1A001CF3F8 /* MyLoseApp5 */ = {
 			isa = PBXGroup;
 			children = (
+				5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */,
 				52276A96246ECF1A001CF3F8 /* AppDelegate.swift */,
 				52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */,
 				52276A9A246ECF1A001CF3F8 /* ViewController.swift */,
 				52276A9C246ECF1A001CF3F8 /* Main.storyboard */,
+				5204F5C4248C53A1002FCB45 /* MapWriteController.swift */,
+				5263F9AC2482007200CE0E1F /* FindWriteController.swift */,
 				52009B41246ED5400010425C /* WriteLookingController.swift */,
 				52009B3F246ED4C40010425C /* DetailController.swift */,
 				52276AAD246ECF69001CF3F8 /* SearchListController.swift */,
@@ -138,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52276AA6246ECF1C001CF3F8 /* LaunchScreen.storyboard in Resources */,
+				5263F9AB2481F84E00CE0E1F /* GoogleService-Info.plist in Resources */,
 				52276AA3246ECF1C001CF3F8 /* Assets.xcassets in Resources */,
 				52276A9E246ECF1A001CF3F8 /* Main.storyboard in Resources */,
 			);
@@ -154,7 +164,9 @@
 				52276A97246ECF1A001CF3F8 /* AppDelegate.swift in Sources */,
 				52009B42246ED5400010425C /* WriteLookingController.swift in Sources */,
 				52276AAE246ECF69001CF3F8 /* SearchListController.swift in Sources */,
+				5263F9AD2482007200CE0E1F /* FindWriteController.swift in Sources */,
 				52276AA1246ECF1A001CF3F8 /* MyLoseApp5.xcdatamodeld in Sources */,
+				5204F5C5248C53A1002FCB45 /* MapWriteController.swift in Sources */,
 				52009B40246ED4C40010425C /* DetailController.swift in Sources */,
 				52276A99246ECF1A001CF3F8 /* SceneDelegate.swift in Sources */,
 			);
@@ -302,6 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyLoseApp5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyLoseApp5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
