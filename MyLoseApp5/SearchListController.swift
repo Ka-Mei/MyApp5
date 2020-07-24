@@ -29,6 +29,8 @@ class SearchListController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,7 +42,8 @@ class SearchListController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - Table view data source
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell") as! SearchListCell
+        return cell
     }
     
     

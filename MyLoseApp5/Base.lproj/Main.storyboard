@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uDs-7d-0GR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -59,7 +59,7 @@
                                 <rect key="frame" x="0.0" y="139" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="fDY-j9-Txi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="130" id="fDY-j9-Txi" customClass="SearchListCell" customModule="MyLoseApp5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fDY-j9-Txi" id="GNn-R9-kyb">
@@ -645,7 +645,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWP-eo-TEY">
-                                <rect key="frame" x="0.0" y="866" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hrm-Xd-7lA"/>
                                 </constraints>
@@ -654,25 +654,40 @@
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="coh-QC-XGE">
-                                <rect key="frame" x="0.0" y="94" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="684"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EmJ-Z7-aOW">
+                                <rect key="frame" x="0.0" y="94" width="414" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="zdl-e9-Jfd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="coh-QC-XGE" firstAttribute="top" secondItem="K1P-mq-dwF" secondAttribute="bottom" id="8qc-1w-b5J"/>
                             <constraint firstItem="fWP-eo-TEY" firstAttribute="leading" secondItem="S5J-VD-TXC" secondAttribute="leading" id="Bvc-m9-vm5"/>
                             <constraint firstItem="K1P-mq-dwF" firstAttribute="trailing" secondItem="S5J-VD-TXC" secondAttribute="trailing" id="C6i-K1-h13"/>
+                            <constraint firstItem="coh-QC-XGE" firstAttribute="top" secondItem="EmJ-Z7-aOW" secondAttribute="bottom" id="Fss-LT-DmR"/>
+                            <constraint firstItem="fWP-eo-TEY" firstAttribute="top" secondItem="coh-QC-XGE" secondAttribute="bottom" id="GdR-2d-eBq"/>
                             <constraint firstItem="coh-QC-XGE" firstAttribute="trailing" secondItem="S5J-VD-TXC" secondAttribute="trailing" id="Lwv-3R-GBs"/>
+                            <constraint firstItem="EmJ-Z7-aOW" firstAttribute="trailing" secondItem="S5J-VD-TXC" secondAttribute="trailing" id="QAk-tc-jsB"/>
+                            <constraint firstItem="EmJ-Z7-aOW" firstAttribute="leading" secondItem="S5J-VD-TXC" secondAttribute="leading" id="RwE-gJ-d7v"/>
                             <constraint firstItem="coh-QC-XGE" firstAttribute="leading" secondItem="S5J-VD-TXC" secondAttribute="leading" id="SsJ-Y2-gmT"/>
                             <constraint firstItem="K1P-mq-dwF" firstAttribute="leading" secondItem="S5J-VD-TXC" secondAttribute="leading" id="bCR-2a-PIU"/>
                             <constraint firstItem="fWP-eo-TEY" firstAttribute="trailing" secondItem="S5J-VD-TXC" secondAttribute="trailing" id="kzm-NS-aMS"/>
                             <constraint firstItem="fWP-eo-TEY" firstAttribute="bottom" secondItem="S5J-VD-TXC" secondAttribute="bottom" id="ow6-Au-Cp5"/>
-                            <constraint firstItem="fWP-eo-TEY" firstAttribute="top" secondItem="coh-QC-XGE" secondAttribute="bottom" id="rGa-po-T07"/>
+                            <constraint firstItem="EmJ-Z7-aOW" firstAttribute="top" secondItem="K1P-mq-dwF" secondAttribute="bottom" id="rZG-vR-SMX"/>
                             <constraint firstItem="K1P-mq-dwF" firstAttribute="top" secondItem="S5J-VD-TXC" secondAttribute="top" id="zcP-fN-98n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S5J-VD-TXC"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nj0-pd-rxu"/>
+                    <connections>
+                        <outlet property="addressText" destination="EmJ-Z7-aOW" id="MCp-XH-xRG"/>
+                        <outlet property="myMap" destination="coh-QC-XGE" id="MvQ-pU-Pdn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Un2-pi-jSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

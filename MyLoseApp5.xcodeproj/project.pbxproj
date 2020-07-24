@@ -20,6 +20,7 @@
 		52276AAE246ECF69001CF3F8 /* SearchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276AAD246ECF69001CF3F8 /* SearchListController.swift */; };
 		5263F9AB2481F84E00CE0E1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */; };
 		5263F9AD2482007200CE0E1F /* FindWriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263F9AC2482007200CE0E1F /* FindWriteController.swift */; };
+		52CFB80B24CAED0A0019EC6A /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFB80A24CAED0A0019EC6A /* SearchListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		52276AAD246ECF69001CF3F8 /* SearchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListController.swift; sourceTree = "<group>"; };
 		5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5263F9AC2482007200CE0E1F /* FindWriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindWriteController.swift; sourceTree = "<group>"; };
+		52CFB80A24CAED0A0019EC6A /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */,
 				52276A9A246ECF1A001CF3F8 /* ViewController.swift */,
 				52276A9C246ECF1A001CF3F8 /* Main.storyboard */,
+				52CFB80A24CAED0A0019EC6A /* SearchListCell.swift */,
 				5204F5C4248C53A1002FCB45 /* MapWriteController.swift */,
 				5263F9AC2482007200CE0E1F /* FindWriteController.swift */,
 				52009B41246ED5400010425C /* WriteLookingController.swift */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52276A9B246ECF1A001CF3F8 /* ViewController.swift in Sources */,
+				52CFB80B24CAED0A0019EC6A /* SearchListCell.swift in Sources */,
 				52276A97246ECF1A001CF3F8 /* AppDelegate.swift in Sources */,
 				52009B42246ED5400010425C /* WriteLookingController.swift in Sources */,
 				52276AAE246ECF69001CF3F8 /* SearchListController.swift in Sources */,
