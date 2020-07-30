@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,12 +18,16 @@
 		52276AA3246ECF1C001CF3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52276AA2246ECF1C001CF3F8 /* Assets.xcassets */; };
 		52276AA6246ECF1C001CF3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52276AA4246ECF1C001CF3F8 /* LaunchScreen.storyboard */; };
 		52276AAE246ECF69001CF3F8 /* SearchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52276AAD246ECF69001CF3F8 /* SearchListController.swift */; };
-		5263F9AB2481F84E00CE0E1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */; };
 		5263F9AD2482007200CE0E1F /* FindWriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263F9AC2482007200CE0E1F /* FindWriteController.swift */; };
 		52CFB80B24CAED0A0019EC6A /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFB80A24CAED0A0019EC6A /* SearchListCell.swift */; };
+		ADF867D724D039EC0034C440 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF867D624D039EC0034C440 /* Animal.swift */; };
+		ADF867D924D0497E0034C440 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF867D824D0497E0034C440 /* Constants.swift */; };
+		ADF867DB24D053E30034C440 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADF867DA24D053E30034C440 /* GoogleService-Info.plist */; };
+		D1A74605D20BC3EBD31C9E77 /* Pods_MyLoseApp5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3AACDCB0DE3C784939C205 /* Pods_MyLoseApp5.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31DAE5C66A4264FE30F9D63B /* Pods-MyLoseApp5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLoseApp5.release.xcconfig"; path = "Target Support Files/Pods-MyLoseApp5/Pods-MyLoseApp5.release.xcconfig"; sourceTree = "<group>"; };
 		52009B3F246ED4C40010425C /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		52009B41246ED5400010425C /* WriteLookingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLookingController.swift; sourceTree = "<group>"; };
 		5204F5C4248C53A1002FCB45 /* MapWriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWriteController.swift; sourceTree = "<group>"; };
@@ -37,9 +41,13 @@
 		52276AA5246ECF1C001CF3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52276AA7246ECF1C001CF3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52276AAD246ECF69001CF3F8 /* SearchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListController.swift; sourceTree = "<group>"; };
-		5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5263F9AC2482007200CE0E1F /* FindWriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindWriteController.swift; sourceTree = "<group>"; };
 		52CFB80A24CAED0A0019EC6A /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
+		74A5776CE5A987C14E34528D /* Pods-MyLoseApp5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLoseApp5.debug.xcconfig"; path = "Target Support Files/Pods-MyLoseApp5/Pods-MyLoseApp5.debug.xcconfig"; sourceTree = "<group>"; };
+		ADF867D624D039EC0034C440 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		ADF867D824D0497E0034C440 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ADF867DA24D053E30034C440 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE3AACDCB0DE3C784939C205 /* Pods_MyLoseApp5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLoseApp5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A74605D20BC3EBD31C9E77 /* Pods_MyLoseApp5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40F3773D3CBAD3054A96F95C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE3AACDCB0DE3C784939C205 /* Pods_MyLoseApp5.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ACDDEBD57B4C6B475BF06D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74A5776CE5A987C14E34528D /* Pods-MyLoseApp5.debug.xcconfig */,
+				31DAE5C66A4264FE30F9D63B /* Pods-MyLoseApp5.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		52276A8A246ECF1A001CF3F8 = {
 			isa = PBXGroup;
 			children = (
 				52276A95246ECF1A001CF3F8 /* MyLoseApp5 */,
 				52276A94246ECF1A001CF3F8 /* Products */,
+				4ACDDEBD57B4C6B475BF06D6 /* Pods */,
+				40F3773D3CBAD3054A96F95C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,23 +100,33 @@
 		52276A95246ECF1A001CF3F8 /* MyLoseApp5 */ = {
 			isa = PBXGroup;
 			children = (
-				5263F9AA2481F84E00CE0E1F /* GoogleService-Info.plist */,
+				ADF867DA24D053E30034C440 /* GoogleService-Info.plist */,
+				AD27A59F24D038CE00972370 /* Model */,
 				52276A96246ECF1A001CF3F8 /* AppDelegate.swift */,
 				52276A98246ECF1A001CF3F8 /* SceneDelegate.swift */,
 				52276A9A246ECF1A001CF3F8 /* ViewController.swift */,
-				52276A9C246ECF1A001CF3F8 /* Main.storyboard */,
 				52CFB80A24CAED0A0019EC6A /* SearchListCell.swift */,
+				52276AAD246ECF69001CF3F8 /* SearchListController.swift */,
+				52276A9C246ECF1A001CF3F8 /* Main.storyboard */,
 				5204F5C4248C53A1002FCB45 /* MapWriteController.swift */,
 				5263F9AC2482007200CE0E1F /* FindWriteController.swift */,
 				52009B41246ED5400010425C /* WriteLookingController.swift */,
 				52009B3F246ED4C40010425C /* DetailController.swift */,
-				52276AAD246ECF69001CF3F8 /* SearchListController.swift */,
 				52276AA2246ECF1C001CF3F8 /* Assets.xcassets */,
 				52276AA4246ECF1C001CF3F8 /* LaunchScreen.storyboard */,
 				52276AA7246ECF1C001CF3F8 /* Info.plist */,
 				52276A9F246ECF1A001CF3F8 /* MyLoseApp5.xcdatamodeld */,
 			);
 			path = MyLoseApp5;
+			sourceTree = "<group>";
+		};
+		AD27A59F24D038CE00972370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADF867D624D039EC0034C440 /* Animal.swift */,
+				ADF867D824D0497E0034C440 /* Constants.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52276AAA246ECF1C001CF3F8 /* Build configuration list for PBXNativeTarget "MyLoseApp5" */;
 			buildPhases = (
+				39EC7D1E1FC1D6131032CBCA /* [CP] Check Pods Manifest.lock */,
 				52276A8F246ECF1A001CF3F8 /* Sources */,
 				52276A90246ECF1A001CF3F8 /* Frameworks */,
 				52276A91246ECF1A001CF3F8 /* Resources */,
+				F4A127C35609F6EBCEB2DF29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,7 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52276AA6246ECF1C001CF3F8 /* LaunchScreen.storyboard in Resources */,
-				5263F9AB2481F84E00CE0E1F /* GoogleService-Info.plist in Resources */,
+				ADF867DB24D053E30034C440 /* GoogleService-Info.plist in Resources */,
 				52276AA3246ECF1C001CF3F8 /* Assets.xcassets in Resources */,
 				52276A9E246ECF1A001CF3F8 /* Main.storyboard in Resources */,
 			);
@@ -158,11 +198,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39EC7D1E1FC1D6131032CBCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyLoseApp5-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A127C35609F6EBCEB2DF29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyLoseApp5/Pods-MyLoseApp5-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyLoseApp5/Pods-MyLoseApp5-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyLoseApp5/Pods-MyLoseApp5-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52276A8F246ECF1A001CF3F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF867D724D039EC0034C440 /* Animal.swift in Sources */,
 				52276A9B246ECF1A001CF3F8 /* ViewController.swift in Sources */,
 				52CFB80B24CAED0A0019EC6A /* SearchListCell.swift in Sources */,
 				52276A97246ECF1A001CF3F8 /* AppDelegate.swift in Sources */,
@@ -173,6 +256,7 @@
 				5204F5C5248C53A1002FCB45 /* MapWriteController.swift in Sources */,
 				52009B40246ED4C40010425C /* DetailController.swift in Sources */,
 				52276A99246ECF1A001CF3F8 /* SceneDelegate.swift in Sources */,
+				ADF867D924D0497E0034C440 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,11 +398,12 @@
 		};
 		52276AAB246ECF1C001CF3F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74A5776CE5A987C14E34528D /* Pods-MyLoseApp5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyLoseApp5/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,11 +417,12 @@
 		};
 		52276AAC246ECF1C001CF3F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DAE5C66A4264FE30F9D63B /* Pods-MyLoseApp5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyLoseApp5/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

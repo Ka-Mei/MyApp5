@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uDs-7d-0GR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -149,6 +149,7 @@
                                                     </constraints>
                                                     <state key="normal" title="詳細"/>
                                                     <connections>
+                                                        <action selector="detailButton:" destination="fDY-j9-Txi" eventType="touchUpInside" id="dgH-f9-vzl"/>
                                                         <segue destination="o4R-pm-KSi" kind="presentation" modalPresentationStyle="fullScreen" id="CRI-BB-zIs"/>
                                                     </connections>
                                                 </button>
@@ -175,6 +176,13 @@
                                                 <constraint firstItem="8c9-6v-Smn" firstAttribute="leading" secondItem="4wZ-5j-jyr" secondAttribute="trailing" constant="5" id="zEC-L2-yTt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressText" destination="j2r-UK-pVN" id="yyC-e5-peg"/>
+                                            <outlet property="animalImage" destination="LsL-FL-Z7h" id="UxN-dK-jTi"/>
+                                            <outlet property="dateText" destination="8c9-6v-Smn" id="65f-Cg-eEp"/>
+                                            <outlet property="nameText" destination="VF9-Qh-WiU" id="go3-8v-zq8"/>
+                                            <outlet property="statusImage" destination="2B1-ay-HMs" id="1E5-jO-JuW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
