@@ -36,7 +36,11 @@ class SearchListController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
 
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      let animal = animals[indexPath.row]
+      performSegue(withIdentifier: "toDetail", sender: animal)
+  }
+    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell") as! SearchListCell

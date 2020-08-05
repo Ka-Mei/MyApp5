@@ -7,84 +7,67 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseStorage
 
-class DetailController: UITableViewController {
+class DetailController: UIViewController {
+
+    var animal :Animal?
+    
+    private let db = Firestore.firestore()
+        
+    private let storage = Storage.storage()
+    
+    @IBOutlet weak var animalImage: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var genderLabel: UILabel!
+    
+    @IBOutlet weak var memoText: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let animal = animal else{ return }
+        nameLabel.text = animal.name
+        
+        //firebaesからget
+        let docRef = db.collection(ANIMAL_REF).document(animal.documentId)
+        docRef.getDocument { (document, error) in
+            if let error = error {
+                print(error)
+            }
+            guard let document = document else{ return }
+            
+            self.nameLabel.text = document["name"] as? String
+            self.addressLabel.text = document["address"] as? String
+            if document["gender"] as? Bool == true{
+                self.genderLabel.text = "オス"
+            }else{
+            self.genderLabel.text = "メス"
+            }
+            self.memoText.text = document["information"] as? String
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        }
+        
+        //strageからimage get
+        let strageRef = storage.reference(forURL: animal.photo_1)
+        strageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
+            if let error = error{
+                print(error)
+                return
+            }
+            guard let data = data else{ return }
+            DispatchQueue.main.async {
+                self.animalImage.image = UIImage(data: data)
+            }
+        }
+        
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }
