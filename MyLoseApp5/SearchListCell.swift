@@ -12,7 +12,9 @@ import FirebaseStorage
 class SearchListCell: UITableViewCell {
     
     private let storage = Storage.storage()
+    
     @IBOutlet weak var animalImage: UIImageView!
+
     @IBOutlet weak var nameText: UILabel!
     
     @IBOutlet weak var dateText: UILabel!
@@ -21,8 +23,9 @@ class SearchListCell: UITableViewCell {
     
     @IBOutlet weak var statusImage: UIImageView!
     
-    
     @IBAction func detailButton(_ sender: Any) {
+        
+        
     }
     
     override func awakeFromNib() {
@@ -35,10 +38,8 @@ class SearchListCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
     func configureCell(animal: Animal) {
-        //         optionsMenu.isHidden = true
-        //         self.thought = thought
-        //         self.delegate = delegate
         
         let gsReference = storage.reference(forURL: animal.photo_1)
         gsReference.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
@@ -52,24 +53,14 @@ class SearchListCell: UITableViewCell {
             }
         }
 
-
-        
         nameText.text = animal.name
-        dateText.text = "2020/7/2"
         addressText.text = animal.address
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy年MM月d日"
+        let timestamp = formatter.string(from: animal.timeStamp)
+        dateText.text = timestamp
         
-        //         let formatter = DateFormatter()
-        //         formatter.dateFormat = "MM月d日, hh:mm"
-        //         let timestamp = formatter.string(from: thought.timestamp)
-        //         timestampLbl.text = timestamp
-        
-        //         if thought.userId == Auth.auth().currentUser?.uid {
-        //             optionsMenu.isHidden = false
-        //             //set gestureRecognizer
-        //             optionsMenu.isUserInteractionEnabled = true
-        //             let tap = UITapGestureRecognizer(target: self, action: #selector(thoughtOptionTapped))
-        //             optionsMenu.addGestureRecognizer(tap)
     }
 }
     

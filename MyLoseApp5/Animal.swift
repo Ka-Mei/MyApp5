@@ -33,7 +33,7 @@ class Animal {
         var animals = [Animal]()
         guard let snap = snapshot else{ return animals }
         for document in snap.documents{
-            
+            //for Transaction
             let data = document.data()
             let userName = document[USERNAME] as? String ?? "Anyone"
             let userId = document[USER_ID] as? String ?? ""
@@ -47,8 +47,6 @@ class Animal {
             
         }
         return animals
-        
-        
     }
     
 }
