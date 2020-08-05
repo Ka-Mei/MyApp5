@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uDs-7d-0GR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -141,19 +141,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwU-0e-PG4">
-                                                    <rect key="frame" x="364" y="100" width="50" height="30"/>
-                                                    <color key="backgroundColor" red="0.61960784310000006" green="0.95294117649999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="KLE-IA-OwH"/>
-                                                        <constraint firstAttribute="width" constant="50" id="R5w-dj-qdH"/>
-                                                    </constraints>
-                                                    <state key="normal" title="詳細"/>
-                                                    <connections>
-                                                        <action selector="detailButton:" destination="fDY-j9-Txi" eventType="touchUpInside" id="dgH-f9-vzl"/>
-                                                        <segue destination="o4R-pm-KSi" kind="presentation" identifier="toDetail" modalPresentationStyle="fullScreen" id="CRI-BB-zIs"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LsL-FL-Z7h" firstAttribute="top" secondItem="GNn-R9-kyb" secondAttribute="top" constant="15" id="2f1-Ad-yI0"/>
@@ -161,12 +148,10 @@
                                                 <constraint firstItem="VF9-Qh-WiU" firstAttribute="top" secondItem="GNn-R9-kyb" secondAttribute="top" constant="15" id="4xY-mf-Ftw"/>
                                                 <constraint firstAttribute="trailing" secondItem="2B1-ay-HMs" secondAttribute="trailing" id="8it-V7-NsU"/>
                                                 <constraint firstItem="vA6-3Q-AGj" firstAttribute="leading" secondItem="LsL-FL-Z7h" secondAttribute="trailing" constant="15" id="8yL-84-opT"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZwU-0e-PG4" secondAttribute="bottom" id="9g4-0f-X1a"/>
                                                 <constraint firstItem="VF9-Qh-WiU" firstAttribute="leading" secondItem="vA6-3Q-AGj" secondAttribute="trailing" constant="5" id="ENT-vc-pIb"/>
                                                 <constraint firstItem="j2r-UK-pVN" firstAttribute="top" secondItem="8c9-6v-Smn" secondAttribute="bottom" constant="5" id="Eyw-Li-IP5"/>
                                                 <constraint firstItem="4wZ-5j-jyr" firstAttribute="top" secondItem="vA6-3Q-AGj" secondAttribute="bottom" constant="5" id="FYV-K6-zr0"/>
                                                 <constraint firstAttribute="bottom" secondItem="LsL-FL-Z7h" secondAttribute="bottom" constant="15" id="L6f-on-xja"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZwU-0e-PG4" secondAttribute="trailing" id="S8K-KP-xsK"/>
                                                 <constraint firstItem="vA6-3Q-AGj" firstAttribute="top" secondItem="GNn-R9-kyb" secondAttribute="top" constant="15" id="UgO-dc-npX"/>
                                                 <constraint firstItem="j2r-UK-pVN" firstAttribute="leading" secondItem="295-7b-S1x" secondAttribute="trailing" constant="5" id="c2b-TP-AgB"/>
                                                 <constraint firstItem="295-7b-S1x" firstAttribute="leading" secondItem="LsL-FL-Z7h" secondAttribute="trailing" constant="15" id="cup-eF-wfd"/>
@@ -183,6 +168,7 @@
                                             <outlet property="dateText" destination="8c9-6v-Smn" id="65f-Cg-eEp"/>
                                             <outlet property="nameText" destination="VF9-Qh-WiU" id="go3-8v-zq8"/>
                                             <outlet property="statusImage" destination="2B1-ay-HMs" id="1E5-jO-JuW"/>
+                                            <segue destination="o4R-pm-KSi" kind="showDetail" id="Hvx-Zh-YKC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -433,7 +419,7 @@
         <!--Detail Controller-->
         <scene sceneID="XI0-ee-V7d">
             <objects>
-                <viewController id="o4R-pm-KSi" customClass="DetailController" customModule="MyLoseApp5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="o4R-pm-KSi" customClass="DetailController" customModule="MyLoseApp5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPH-nw-nJO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -445,7 +431,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="詳細画面" id="YbM-5C-y5e">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="3zX-6T-Wqu"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="3zX-6T-Wqu">
+                                            <connections>
+                                                <action selector="back" destination="o4R-pm-KSi" id="O2r-VL-OMw"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -568,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmM-ME-6nh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082.608695652174" y="121.875"/>
+            <point key="canvasLocation" x="1426" y="162"/>
         </scene>
         <!--Find Write Controller-->
         <scene sceneID="Ld6-U1-nu7">

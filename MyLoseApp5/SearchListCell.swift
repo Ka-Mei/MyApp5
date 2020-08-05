@@ -23,11 +23,6 @@ class SearchListCell: UITableViewCell {
     
     @IBOutlet weak var statusImage: UIImageView!
     
-    @IBAction func detailButton(_ sender: Any) {
-        
-        
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

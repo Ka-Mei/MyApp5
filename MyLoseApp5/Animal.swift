@@ -18,9 +18,9 @@ class Animal {
     private(set) var information: String!
     private(set) var photo_1: String!
     private(set) var timeStamp: Date!
-    private(set) var documentId:String!
-    private(set) var latitude:Double!
-    private(set) var longitude:Double!
+    private(set) var documentId: String!
+    private(set) var latitude: Double!
+    private(set) var longitude: Double!
     //オス=true メス=false
     private(set) var gender:Bool!
     
@@ -54,8 +54,8 @@ class Animal {
             let timestamp = document["timeStamp"] as? Date ?? Date()
             let documentId = document.documentID
             let gender = document["gender"] as? Bool ?? true
-            let latitude = document["latitude"] as? Double
-            let longitude = document["longitude"] as? Double
+            let latitude = document["latitude"] as? Double ?? 35.0
+            let longitude = document["longitude"] as? Double ?? 135.0
             
             let new_animal = Animal(userName: userName, userId: userId, address: address, name: name, information: information, photo_1: photo_1, timeStamp: timestamp,documentId: documentId, gender: gender, latitude: latitude, longitude: longitude)
             animals.append(new_animal)

@@ -44,15 +44,16 @@ class DetailController: UIViewController {
             }
             guard let document = document else{ return }
             
-            self.nameLabel.text = document["name"] as? String
-            self.addressLabel.text = document["address"] as? String
-            if document["gender"] as? Bool == true{
-                self.genderLabel.text = "オス"
-            }else{
-            self.genderLabel.text = "メス"
+            DispatchQueue.main.async {
+                self.nameLabel.text = document["name"] as? String
+                self.addressLabel.text = document["address"] as? String
+                if document["gender"] as? Bool == true{
+                    self.genderLabel.text = "オス"
+                }else{
+                    self.genderLabel.text = "メス"
+                }
+                self.memoText.text = document["information"] as? String
             }
-            self.memoText.text = document["information"] as? String
-
         }
         
         //strageからimage get
@@ -69,5 +70,8 @@ class DetailController: UIViewController {
         }
         
     }
-  
+
+    @IBAction private func back() {
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -35,11 +35,17 @@ class SearchListController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detail = segue.destination as? DetailController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        detail.animal = animals[indexPath.row]
+    }
 
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let animal = animals[indexPath.row]
-      performSegue(withIdentifier: "toDetail", sender: animal)
-  }
+    // MARK: - Table View
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
